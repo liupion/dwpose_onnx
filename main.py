@@ -23,7 +23,6 @@ h, w, _ = ref_image.shape
 cavas = draw_pose(ref_pose, h, w)
 cavas = cavas.transpose(1, 2, 0)
 
-print(cavas.shape, raw_image.shape)
 cavas = np.hstack([cavas, raw_image])
 cv2.imshow('Canvas Image', cavas)
 
